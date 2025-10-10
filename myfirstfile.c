@@ -8,13 +8,14 @@
 #include <fcntl.h>
 #include <unistd.h>
 #include <stdlib.h>
+
 int main() {
     int rd;
     off_t p;
     pid_t childPid;
     rd = open(“some_file.txt”, O_CREAT | O_RDONLY, 0644);
     if (rd < 0) {
-        printf("Error opening/creating file");
+        printf("Error opening/creating file!!!");
         return 1;
     }
     write(rd, "Hi, I am Anhelina :)", 20);
